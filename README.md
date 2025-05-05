@@ -1,61 +1,49 @@
-This project focuses on cleaning and transforming a dataset that contains information about individuals' stress levels. It includes fixing column names, correcting inconsistent data, removing duplicates and nulls, and creating new columns for better analysis.
-
----
-
 ## 📌 Objective
+Clean and analyze a stress dataset to uncover patterns in employee well-being and recommend targeted health interventions.
 
-To clean and prepare the `Stress_levels` dataset for further analysis or visualization by applying SQL queries. The final output includes:
-- Cleaned dataset with renamed columns
-- Removal of duplicates and nulls
-- To determine the distribution of stress severity among employees.
-- To analyze heart rate patterns across different months.
-- To examine the prevalence and impact of emotional and physical symptoms on employees.
-- To assess the relationship between stress duration and severity.
-- To identify employees with elevated heart rates and poor sleep quality and the associated risk factors.
+## 🛠️ Tools
+- SQL 
+- Data Cleaning & Feature Engineering
+- Data Analysis 
+---
+
+## 📂 Steps Taken
+
+### 1. Data Cleaning
+- Renamed confusing column names
+- Updated gender labels (`M` → `Male`, `F` → `Female`)
+- Fixed typos (e.g., “Stomach Age” → “Stomach Ache”)
+- Removed duplicates and null entries
+- Replaced missing stress scores with dataset average
+
+### 2. Feature Engineering
+- Created `Full Name` from First and Last Names
+- Calculated `Age` and grouped it into age brackets
+- Categorized stress duration into 3 groups (0–3, 4–6, >6 months)
 
 ---
 
-## 🛠️ Tools Used
+## 📊 Key Insights
 
-- **SQL**
-
----
-
-## 🧼 Data Cleaning & Transformation Steps
-
-### ✅ 1. Rename Columns
-Changed technical column names like `first_name`, `dob` to more readable ones like `First Name`, `Date of Birth`.
-
-### ✅ 2. Standardize Gender Values
-Converted gender values from `'M'` and `'F'` to `'Male'` and `'Female'`.
-
-### ✅ 3. Fix Typo in Data
-Replaced wrong value `"Stomach Age"` with correct `"Stomach Ache"`.
-
-### ✅ 4. Remove Duplicate Rows
-Used `ROW_NUMBER()` to identify and delete exact duplicate entries.
-
-### ✅ 5. Handle Missing Values
-- Filled a missing stress level score for one employee using the dataset's average.
-- Removed all rows containing `NULL` in any important column.
-
-### ✅ 6. Create a Cleaned View
-Created a SQL `VIEW` named `"Stress Level"` with selected and renamed fields, including a `Full Name` field.
-
-### ✅ 7. Add Calculated Fields
-Enhanced the view by adding:
-- **Age** (based on date of birth and test date)
-- **Age Group** (categorized age)
-- **Stress Duration in Months** (based on day counts)
+- **Severity Levels**: 40% moderate, 40% mild, 20% severe stress
+- **Heart Rate Trends**: Small monthly shifts (lowest in March, highest in June)
+- **Emotional Symptoms**: Anxiety & depression are most common; anger causes highest heart rate
+- **Physical Symptoms**: Fatigue & back pain most common; stomach ache causes the highest heart rate
+- **Stress Duration**: Severity increases with stress duration
+- **High-Risk Group**: High heart rate + poor sleep mostly tied to financial, work, and family stress
 
 ---
 
-## 📊 Use Case
+## ✅ Recommendations
 
-This cleaned dataset can be used for:
-- Visualizing stress levels by age group
-- Understanding physical and emotional symptoms
-- Building dashboards with Power BI or Tableau
+- Provide targeted support for employees with moderate/severe stress
+- Monitor and address monthly heart rate fluctuations
+- Focus mental health programs on anxiety, depression, and anger
+- Improve work ergonomics to reduce fatigue and back pain
+- Tailor wellness efforts to stress duration and source
+- Prioritize high-risk individuals with poor sleep and high stress markers
 
 ---
 
+## 📌 Conclusion
+This analysis reveals strong links between emotional/physical symptoms and heart rate. Stress severity grows over time. With data-driven insights, HR teams can build focused wellness programs that truly improve employee well-being.
