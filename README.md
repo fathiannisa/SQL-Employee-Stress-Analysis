@@ -6,16 +6,18 @@ This project focuses on cleaning and transforming a dataset that contains inform
 
 To clean and prepare the `Stress_levels` dataset for further analysis or visualization by applying SQL queries. The final output includes:
 - Cleaned dataset with renamed columns
-- Standardized values (e.g., gender)
 - Removal of duplicates and nulls
-- A final view with additional columns like **Full Name**, **Age**, **Age Group**, and **Stress Duration in Months**
+- To determine the distribution of stress severity among employees.
+- To analyze heart rate patterns across different months.
+- To examine the prevalence and impact of emotional and physical symptoms on employees.
+- To assess the relationship between stress duration and severity.
+- To identify employees with elevated heart rates and poor sleep quality and the associated risk factors.
 
 ---
 
 ## 🛠️ Tools Used
 
-- **SQL Server**
-- **T-SQL (Transact-SQL)**
+- **SQL**
 
 ---
 
@@ -45,13 +47,6 @@ Enhanced the view by adding:
 - **Age** (based on date of birth and test date)
 - **Age Group** (categorized age)
 - **Stress Duration in Months** (based on day counts)
-
----
-
-## 🧾 Sample Output (Columns in Final View)
-
-| ID | Full Name | Gender | Date of Birth | Age | Age Group | Stress Duration (In Months) | Severity | ... |
-|----|-----------|--------|----------------|-----|-----------|-----------------------------|----------|-----|
 
 ---
 
